@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Client\css\**" />
+    <Compile Remove="wwwroot\Client\js\**" />
+    <Compile Remove="wwwroot\Client\lib\**" />
+    <Content Remove="wwwroot\Client\css\**" />
+    <Content Remove="wwwroot\Client\js\**" />
+    <Content Remove="wwwroot\Client\lib\**" />
+    <EmbeddedResource Remove="wwwroot\Client\css\**" />
+    <EmbeddedResource Remove="wwwroot\Client\js\**" />
+    <EmbeddedResource Remove="wwwroot\Client\lib\**" />
+    <None Remove="wwwroot\Client\css\**" />
+    <None Remove="wwwroot\Client\js\**" />
+    <None Remove="wwwroot\Client\lib\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.S3" Version="3.7.304.10" />
+		<PackageReference Include="Hangfire" Version="1.8.17" />
+		<PackageReference Include="Hangfire.MemoryStorage" Version="1.8.1.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.1" />
+		<PackageReference Include="MongoDB.Driver" Version="2.13.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+		<PackageReference Include="StackExchange.Redis" Version="2.8.24" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\HashGenerator\HashGenerator.csproj" />
+	</ItemGroup>
+
+</Project>
